@@ -1,0 +1,18 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url : jdbc:postgresql://192.168.50.222:5432/casaos
+    driverClassName: org.postgresql.Driver
+    username: casaos
+    password: casaos
+  jpa:
+    hibernate.ddl-auto: create-drop
+  kafka:
+      bootstrap-servers: 192.168.50.222:9092
+      groupId: bulk-user-consumer-group
+
+bulk.data:
+  partitionSize: 8
+  commitSize: 100
